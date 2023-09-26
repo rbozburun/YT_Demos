@@ -1,0 +1,112 @@
+Golang (Go programlama dili), Google'ın kendi içerisinde barındırdığı sistemleri daha hızlı, güvenli ve verimli hale getirmek amacıyla çıkartılmış, açık kaynaklı, Google tarafından desteklenen, kullanım kolaylığı ile ön plana çıkan, statik tipli bir programlama dilidir. 
+
+Go, Golang, Google Go gibi farklı isimlerle adlandırılmaktadır. Golang, 2007 yılında Rob Pike, Robert Griesemer ve Ken Thompson tarafından piyasaya sürülmüştür. 
+
+Google mühendislerinin Golang’ı geliştirmesindeki ana amacı diğer programlama dillerindeki eleştirileri çözerek, başarılı yönlerini alıp tek bir dil halinde birleştirmekti.  25 anahtar sözcükten oluşan sade yapısı, maskotu “Gopher” Golang’in bu kadar popüler olmasını sağlamıştır.
+
+ 
+
+ 
+Golang ile Neler Yapılabilir? - Kullanım Alanları
+Golang, esnek yapısı sayesinde herkes tarafından öğrenilmesi kolay olan popüler ve bir çok alanda proje geliştirme sürecinde yer alan bir programlama dilidir.  Her dilin kendine özgü kullanım alanları vardır, peki Golang ne işe yarar?
+
+ 
+
+1- Web Uygulamaları
+Golang ile hızlı ve iyi performanslı web uygulamaları yapılabilir. Web geliştirme aşamasında HTML , JSON ve HTTP gibi ögeler, dilin temel kod tabanını oluşturur. 
+
+Ayrıca Golang topluluğunun geliştirdiği Beego, Martini ve Revel gibi frameworkler de proje geliştirme aşamasında kullanılabilir. 
+
+ 
+
+2- Dağıtılmış Ağ Hizmetleri
+Go programlama dilinin “Goroutines” olarak adlandırılan, işlevlerin ve yöntemlerin aynı anda çalışmasını sağlayan eşzamanlılık özelliği bulunur. Golang’in bu eşzamanlılık özelliği web için hem hızlı geliştirme hem de yüksek performansıyla kaliteli projeler üretmeyi sağlar. Aynı zamanda bu özellik ücretsiz olarak kanalları birbirine bağlar. 
+
+ 
+3- Bulut Bilişim
+Go'nun eşzamanlılık, taşınabilirlik ve ağ oluşturma özellikleri onu bulut bilişim alanında çalışan uygulamalar oluşturmak için uygun bir dil haline getirmiştir. Örneğin, Kubernetes, Google Cloud gibi bulut bilişim platformları Go programlama dili kullanarak oluşturulmuştur. Dropbox ve SendGrid dahil olmak üzere diğer bulut hizmetleri de Golang’i kullanır.
+
+Ayrıca Golang ile tek bir kod yazılır. Bu kod istenilen yere dağıtılır bu da bakımının çok daha hızlı ve pratik bir şekilde yapılmasını sağlar. Uygulamada bir değişiklik yapılması gerektiriyorsa, uygulamayı tek bir yerde değiştirmek ve ardından Windows, Linux gibi dağıtım platformu için derlemek yeterlidir. 
+
+ 
+
+4- Haber ve Multimedya Siteleri
+Golang ile haber siteleri ve multimedya platformları güvenli bir şekilde oluşturulabilir. Örneğin bir haber sitesi olan BBC, arka ucunda Go programlama dilini kullanıyor.
+
+Yine benzer şekilde Youtube, SoundCloud ve Netflix geliştirme süreçlerinde Golang kullanıyor.
+
+ 
+
+5- Golang ile Makine Öğrenimi 
+Golang’in çok yönlülüğü, eşzamanlılığı ve taşınabilirliği onun “Makine Öğrenimi (ML)”  projelerinde kullanılmasını sağlar. 
+
+Hatta, veri bilimciler tarafından popüler olması ve bu alanda GoLearn, Gorgonia ve goml gibi birçok kütüphaneye sahip olması nedeniyle de epey avantajlı bir konumda bulunuyor.
+
+ 
+
+Golang Kullanan Firmalar
+Kullanımı kolay ve avantajlı bir programlama dili olan Golang’ı bugün birçok teknoloji devi kullanıyor. Go programlama dilini kullanan bazı firmalar şunlardır:
+ 
+
+Docker
+Facebook
+Google
+Twitter
+Apple
+Github
+Ubuntu
+Amazon
+Dropbox
+Uber
+Medium
+Trendyol
+Netflix
+Youtube
+Go programlama dilini kullanan diğer firmalar Golang’in Github profili GoUsers bölümünden incelenebiliyor.
+
+ 
+
+Neden Golang Kullanılmalı?
+Golang ile yüksek performanslı ürünler ortaya çıkar. 
+Golang güvenilirdir. Google tarafından desteklenir. 
+Golang’i kullanmak basittir. Diğer programlama dillerine göre sade ve anlaşılır bir yapısı vardır.
+Birçok farklı sunucu ile sorunsuz bir şekilde çalışır. 
+Go dilinde sadece 25 tane anahtar kelime vardır. Bu da geliştiricileri karmaşık söz dizimlerinden kurtarır. 
+Golang geriye dönük uyumluluğu olan bir dildir. Yani ilk sürümde ve son sürümde yazılan kodlar sorunsuz bir şekilde çalışır. 
+“Concurrency (Eşzamanlılık)” özelliği sayesinde birbirinden bağımsız çalışmaların birleşerek çalıştırılmasına olanak tanır.
+Golang ile geliştirilen projelerin RAM ihtiyacı düşüktür. 
+“Garbage Collection” yani çöp toplama özelliği sayesinde Go dili ile yazılmış ürünler kaynakları kullandıktan sonra artık ihtiyacı olmayan kaynakları işletim sisteminin kullanımına açmış olur.
+
+ 
+
+En İyi Golang IDE'leri Nelerdir?
+Yazılımcılar kod yazabilmek için çeşitli uygulamalara ihtiyaç duyar. Bu uygulamalar arasında yer alan IDE’ler, Integrated Development Environment’in kısaltması olup, yazılımcıların daha kolay bir şekilde uygulama kodlayabilmesi için geliştirilmiştir.
+
+En iyi ve en çok kullanılan Golang geliştirme ortamları (IDE) şunlardır: Vim, Atom, Emacs, Sublime Text, IntelliJ, Eclipse,Visual Studio Code. Bu IDE’ler kendi resmi sitelerinden son sürümleri indirilerek kullanılabilir. 
+
+ 
+
+En Çok Kullanılan Golang Kütüphaneleri Nelerdir?
+Golang ile yazılım geliştirirken tekrarlı işlemlerle veya uzun kodlarla zaman kaybetmemek için kısa ve kullanımı basit kütüphaneler bulunur. En çok kullanılan Golang kütüphaneleri şunlardır: 
+
+ORCA
+Beego
+Gorilla Toolkit
+Gobot
+Martini
+ 
+
+Golang Zor Mu? - Online Go Programlama Dili Dersleri
+Golang’i ne kadar sürede öğrenebileceği konusu önceki programlama deneyimine, öğrenme yöntemine ve öğrenmeye ayrılan zamana bağlıdır. Ancak Go programlama dilinin basit yapısı onun kolaylıkla öğrenilmesini sağlar. 
+
+Özellikle başka bir programlama dili hakkında bilginiz varsa, öğrenmesi nispeten daha kolaydır. Go'nun basitliği, 2021 StackOverflow Geliştirici Anketi'ne göre en sevilen 10. programlama dilinden 8. sıraya yükselmesinin nedenlerinden biridir.
+
+Online çok sayıda ücretli ve ücretsiz Golang dersleri mevcuttur. YouTube, Udemy, Coursera Golang Programları, Tour of Golang Tutorials Point - Temel Golang Komutları Golang öğrenebileceğiniz kaynaklar arasında yer almaktadır. Ayrıca her geçen gün büyüyen, destek alabileceğiniz, sorunlar üzerine beraber düşünebileceğiniz geniş bir topluluğu da bulunur. 
+
+
+ 
+
+Golang Dilinin Kariyer İmkanları Nelerdir?
+Go veya diğer bir adıyla Golang programlama diline hakim olan profesyoneller Golang Developer olarak şirketlerin bünyelerinde çalışabilirler. 
+
+Eğer sen de yazılım geliştiricisiysen, hayalindeki kariyere ulaşmak için tek yapman gereken coderspace’de profilini oluşturmak ve bizim senin için mükemmel fırsatı bulmamızı beklemek!
