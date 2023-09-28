@@ -1,0 +1,15 @@
+"AMD" veya "Advanced Micro Devices," bilgisayar donanımı ve mikroçip üreticisi bir Amerikan şirketidir. AMD, özellikle işlemciler (CPU'lar), grafik kartları (GPU'lar) ve diğer bilgisayar bileşenleri konusunda tanınmıştır. Şirket, Intel'in yanı sıra bilgisayar işlemcileri ve grafik kartları pazarında rekabet eden bir ana rakibidir.
+
+İşte AMD'nin bazı önemli ürünleri ve katkıları:
+
+Ryzen İşlemciler: AMD'nin Ryzen işlemci ailesi, masaüstü ve dizüstü bilgisayarlar için yüksek performanslı işlemciler sunar. Ryzen işlemciler, çoklu çekirdek performansı ve enerji verimliliği konusunda rekabetçi bir alternatif sunar.
+
+EPYC İşlemciler: AMD'nin sunucu pazarına yönelik EPYC işlemcileri, yüksek performanslı sunucu ve veri merkezi uygulamaları için tasarlanmıştır. Büyük işlem gücü ve çekirdek sayısı sunarlar.
+
+Radeon Grafik Kartları: AMD'nin Radeon grafik kartları, oyuncular ve profesyonel grafik tasarımcıları için yüksek performanslı grafik işleme yetenekleri sunar. Aynı zamanda oyun konsollarında da AMD grafik teknolojileri sıkça kullanılır.
+
+RDNA ve RDNA 2 Grafik Mimarileri: AMD, RDNA ve RDNA 2 grafik mimarilerini geliştirerek grafik kartlarının performansını ve enerji verimliliğini artırmıştır. Bu mimariler özellikle oyun ve diğer grafik yoğun uygulamalar için önemlidir.
+
+APU'lar (Accelerated Processing Units): AMD'nin APU'ları, işlemci ve grafik işlem birimini aynı çip üzerinde birleştirir. Bu, düşük maliyetli dizüstü bilgisayarlar ve masaüstü sistemler için uygun fiyatlı ve enerji verimli bir çözüm sunar.
+
+AMD, yıllar içinde bilgisayar endüstrisine önemli katkılarda bulunmuş ve rekabetçi bir güç olarak varlığını sürdürmüştür. İşlemci ve grafik kartı pazarındaki rekabet, tüketicilere daha iyi fiyatlar ve daha iyi performans sunar.

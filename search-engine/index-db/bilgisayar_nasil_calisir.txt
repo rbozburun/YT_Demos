@@ -1,0 +1,17 @@
+Bir bilgisayarın nasıl çalıştığını anlamak için temel kavramları ve işleyişini anlamak önemlidir. Bilgisayarlar karmaşık sistemlerdir, ancak temelde işlemci, bellek, giriş/çıkış aygıtları ve yazılım bileşenlerinden oluşurlar. İşte bir bilgisayarın temel çalışma prensipleri:
+
+İşlemci (CPU): İşlemci, bilgisayarın "beyni" olarak kabul edilir. Bilgisayar programlarını çalıştırmak, verileri işlemek ve komutları yerine getirmek için kullanılır. İşlemci, aritmetik işlemleri gerçekleştirir ve kontrol işlemlerini yönetir.
+
+Bellek (RAM): Bellek, geçici verilerin saklandığı bir alandır. Bilgisayarın anlık olarak çalışan programlarını ve verilerini tutar. RAM, işlemciye hızlı erişim sağlar, bu nedenle daha fazla bellek, daha iyi performans demektir.
+
+Depolama Aygıtları (Hard Disk, SSD): Bilgisayarın uzun vadeli verilerini sakladığı ve programları depoladığı yerdir. Sabit disk sürücüleri (HDD) veya katı hal sürücüleri (SSD) gibi depolama aygıtları kullanılır.
+
+Giriş Aygıtları: Klavye, fare, dokunmatik ekranlar gibi giriş aygıtları, kullanıcının bilgisayarla etkileşim kurmasını sağlar. Bilgisayarın komutları ve verileri almasını sağlarlar.
+
+Çıkış Aygıtları: Monitörler, hoparlörler, yazıcılar gibi çıkış aygıtları, bilgisayarın sonuçlarını gösterir veya dışarıya iletebilir.
+
+Ana Kart (Motherboard): Tüm bu bileşenleri bağlayan ve iletişimlerini sağlayan ana karttır. İşlemci, bellek, depolama ve diğer aygıtlar bu kart üzerine monte edilir.
+
+Yazılım: Bilgisayarın çalışmasını yöneten programlar ve işletim sistemidir. İşletim sistemi (örneğin, Windows, macOS, Linux), donanımı yönetir ve kullanıcının bilgisayarla etkileşimini sağlar. Uygulama yazılımları ise belirli görevleri yerine getirmek için kullanılır (örneğin, tarayıcılar, ofis uygulamaları, oyunlar).
+
+Bir bilgisayar, kullanıcının verileri giriş aygıtları aracılığıyla işlemcide işleyebileceği birçok karmaşık süreçten geçer. İşlemci, komutları alır, bellekten verileri okur ve işler, ardından sonuçları giriş/çıkış aygıtlarına gönderir. Bu süreç, kullanıcının bilgisayarı etkileşimli olarak kullanmasını ve bir dizi görevi yerine getirmesini sağlar.

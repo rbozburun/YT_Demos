@@ -1,0 +1,7 @@
+Intel, Intel Corporation adlı Amerikan çok uluslu bir teknoloji şirketidir ve özellikle yarıiletken ürünler, mikroişlemciler (CPU'lar), anakartlar, ağ ekipmanları ve diğer bilgisayar bileşenleri üretimiyle tanınır. Intel, 1968 yılında kuruldu ve bilgisayar teknolojisinin gelişiminde önemli bir rol oynamıştır.
+
+İntel'in en bilinen ürünleri, kişisel bilgisayarların ve sunucuların temel işlemci (CPU) birimleridir. Intel'in mikro işlemcileri, x86 ve x86-64 mimarileri üzerine inşa edilmiş ve dünya genelinde yaygın olarak kullanılmaktadır. İşlemci ürünleri, farklı kullanım alanlarına ve performans gereksinimlerine yönelik farklı serilerde bulunmaktadır, örneğin Intel Core, Intel Xeon, ve Intel Atom gibi.
+
+Intel ayrıca grafik işlem birimleri (GPU'lar), yonga setleri (chipsets), SSD'ler (katı hal sürücüler), ağ ürünleri ve diğer teknoloji bileşenlerini de üretmektedir. Şirket, bilgisayar endüstrisindeki liderliği ve teknoloji inovasyonlarıyla tanınır.
+
+Intel, ayrıca teknoloji araştırma ve geliştirmeye büyük yatırımlar yapar ve bilgisayar endüstrisindeki trendleri şekillendiren bir rol oynamıştır. Aynı zamanda çeşitli sektörlere yönelik özel çözümler sunar ve geniş bir müşteri tabanına hizmet verir.

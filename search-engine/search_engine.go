@@ -1,47 +1,120 @@
 package main
 
 import (
-    "html/template"
-    "net/http"
+	"bufio"
+	"html/template"
+	"io/ioutil"
+	"log"
+	"net/http"
+	"os"
+	"path/filepath"
+	"strings"
 )
 
+type Result struct {
+	Link  string
+	Title string
+}
+
+type ResultData struct {
+	Results []Result
+}
+
 func homePage(w http.ResponseWriter, r *http.Request) {
-    tmpl, err := template.ParseFiles("index.html")
-    if err != nil {
-        http.Error(w, err.Error(), http.StatusInternalServerError)
-        return
-    }
-    tmpl.Execute(w, nil)
+	tmpl, err := template.ParseFiles("index.html")
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	tmpl.Execute(w, nil)
+}
+
+func listFilesInDirectory(directoryPath string, searchString string) ([]Result, error) {
+	var result_list []Result
+
+	// Dizindeki dosyaları okuyoruz
+	files, err := ioutil.ReadDir(directoryPath)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Dosyaları tek tek okuyup searchString ifadesini içeriyorlar mı kontrol et
+	for _, file := range files {
+		just_filename := file.Name()
+
+		file_path, err := filepath.Abs(directoryPath + "/" + file.Name())
+		if err != nil {
+			panic(err)
+		}
+
+		file, err := os.Open(file_path)
+		if err != nil {
+			log.Printf("Dosya açma hatası: %v", err)
+			break
+		}
+		defer file.Close()
+
+		scanner := bufio.NewScanner(file)
+		// Satır satır aradığımız ifadeyi araştıralım
+		for scanner.Scan() {
+			query_string := string(searchString)
+			line := scanner.Text()
+
+			line = strings.ToLower(line)
+			query_string = strings.ToLower(query_string)
+
+			if strings.Contains(line, query_string) {
+				title := query_string + " - " + just_filename
+				link := "/index-db/" + just_filename
+				result_list = append(result_list, Result{Title: title, Link: link})
+				break
+			}
+		}
+		if err := scanner.Err(); err != nil {
+			log.Printf("Dosya okuma hatası: %v", err)
+		}
+	}
+	return result_list, nil
 }
 
 func search(w http.ResponseWriter, r *http.Request) {
-    // Retrieve the search query entered by the user
-    query := r.URL.Query().Get("query")
+	// Aradığımız şey
+	searchString := r.URL.Query().Get("query")
 
-    // Process the query and fetch results (you'll need to fill in this part according to your own search logic)
+	// Arama algoritması - Sonuçları index db'den çekiyoruz
+	directoryPath := "./index-db"
 
-    // Display the results using the results.html template
-    tmpl, err := template.ParseFiles("results.html")
-    if err != nil {
-        http.Error(w, err.Error(), http.StatusInternalServerError)
-        return
-    }
-    // Send the results in a data structure
-    data := struct {
-        Results []struct {
-            Link  string
-            Title string
-        }
-    }{
-        // Populate the results here
-        // For example: {Link: "http://example.com", Title: "Example Page"}
-    }
-    tmpl.Execute(w, data)
+	result_list, err := listFilesInDirectory(directoryPath, searchString)
+	if err != nil {
+		log.Fatalf("Dizin listeleme hatası: %v", err)
+	}
+
+	// Sonuçları Başlık & Link olarak listeliyoruz.
+	tmpl, err := template.ParseFiles("results.html")
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	// Sonucları göster
+	data := ResultData{
+		Results: result_list,
+	}
+
+	err = tmpl.Execute(w, data)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
 }
 
 func main() {
-    http.HandleFunc("/", homePage)
-    http.HandleFunc("/search", search)
+	http.HandleFunc("/", homePage)
+	http.HandleFunc("/search", search)
 
-    http.ListenAndServe(":8080", nil)
+	// index-db içindeki dosyaları serve et:
+	fs := http.FileServer(http.Dir("index-db"))
+	http.Handle("/index-db/", http.StripPrefix("/index-db/", fs))
+
+	http.ListenAndServe(":8080", nil)
 }
