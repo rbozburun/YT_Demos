@@ -83,19 +83,16 @@ func search(w http.ResponseWriter, r *http.Request) {
 
 	// Arama algoritması - Sonuçları index db'den çekiyoruz
 	directoryPath := "./index-db"
-
 	result_list, err := listFilesInDirectory(directoryPath, searchString)
 	if err != nil {
 		log.Fatalf("Dizin listeleme hatası: %v", err)
 	}
-
 	// Sonuçları Başlık & Link olarak listeliyoruz.
 	tmpl, err := template.ParseFiles("results.html")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-
 	// Sonucları göster
 	data := ResultData{
 		Results: result_list,
