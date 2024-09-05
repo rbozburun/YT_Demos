@@ -38,8 +38,8 @@
 
             fetch('/books', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams({ 'category': category })
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ 'category': category })
             })
             .then(response => response.json())
             .then(data => {

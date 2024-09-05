@@ -16,6 +16,8 @@ services:
       - "5000:5000"
     depends_on:
       - mongo
+    environment:
+    - PYTHONUNBUFFERED=1
 
 volumes:
   mongo_data:
