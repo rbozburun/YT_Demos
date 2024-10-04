@@ -9,6 +9,7 @@ app = Flask(__name__)
 client = MongoClient('mongodb://mongo:27017/')
 db = client['testdb']
 books_collection = db['books']
+password="test-gitleaks"
 
 @app.route('/')
 def index():
