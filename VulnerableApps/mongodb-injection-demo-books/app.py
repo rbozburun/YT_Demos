@@ -10,7 +10,7 @@ client = MongoClient('mongodb://mongo:27017/')
 db = client['testdb']
 books_collection = db['books']
 
-base64_secret = 'as3Z2Ugc2d1ZXN15IHBhc3N3bsIGZ2Ugc2d1ZXNz3Jk'
+base64_secret = 'REDACTED'
 @app.route('/')
 def index():
     return render_template('index.html')
