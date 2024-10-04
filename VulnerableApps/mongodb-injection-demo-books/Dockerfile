@@ -14,5 +14,9 @@ COPY . .
 # Expose the port that Flask runs on
 EXPOSE 5000
 
+# Gitleaks testing
+# password=123
+
 # Run the Flask application
 CMD ["python", "-u", "app.py"]
+
