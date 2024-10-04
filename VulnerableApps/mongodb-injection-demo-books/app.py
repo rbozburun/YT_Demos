@@ -9,8 +9,7 @@ app = Flask(__name__)
 client = MongoClient('mongodb://mongo:27017/')
 db = client['testdb']
 books_collection = db['books']
-# Added for gitleaks
-base64_secret = 'KanalaAboneOlun-Secret!'
+
 
 @app.route('/')
 def index():
