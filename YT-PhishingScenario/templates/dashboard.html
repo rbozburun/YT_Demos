@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .header {
+            background-color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .logo {
+            height: 40px;
+            width: auto;
+        }
+        .header-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin: 0;
+        }
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: calc(100vh - 90px);
+        }
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            border: 1px solid #c3e6cb;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 0.5s ease-in;
+        }
+        .content-wrapper {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .info-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 800px;
+            width: 100%;
+        }
+        .app-download {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+        .store-button {
+            height: 40px;
+            width: auto;
+            transition: transform 0.2s;
+        }
+        .store-button:hover {
+            transform: scale(1.05);
+        }
+        .features-list {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+        .features-list li {
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="{{ url_for('static', filename='images/AlBank-Logo.png') }}" alt="Bank Logo" class="logo">
+        <h1 class="header-title">AL BANK</h1>
+    </header>
+    
+    <div class="main-container">
+        <div class="success-message">
+            Hesabınız doğrulanmıştır, teşekkürler.
+        </div>
+        <div class="content-wrapper">
+            <div class="info-container">
+                <h2>AlBank Mobil Bankacılık</h2>
+                <p>AlBank Mobil Bankacılık, hızlı ve güvenli bir mobil bankacılık deneyimi sunar. AlBank Mobil Bankacılık, aşağıdaki özellikleri içerir:</p>
+                <ul>
+                    <li>24/7 hesap erişimi</li>
+                    <li>Hızlı ve güvenli işlemler</li>
+                    <li>Fatura ödemeleri ve transferler</li>
+                    <li>Mobil kontrol ödemesi</li>
+                    <li>Gerçek zamanlı hesap bildirimleri</li>
+                    <li>İşaret ve yüz tanıma oturum açma</li>
+                </ul>
+                
+                <h3>AlBank Mobil Bankacılık'ı indirin</h3>
+                <p>AlBank Mobil Bankacılık'ı tercih ettiğiniz uygulama mağazasından indirin:</p>
+                <div class="app-download">
+                    <a href="#"><img src="{{ url_for('static', filename='images/as_download.png') }}" alt="Download on App Store" class="store-button"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='images/gs_download.png') }}" alt="Get it on Google Play" class="store-button"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

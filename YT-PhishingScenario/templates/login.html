@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Bank Hesap Doğrulama</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .header {
+            background-color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .bank-text-logo {
+            height: 80px;
+            width: auto;
+        }
+        .logo {
+            height: 40px;
+            width: auto;
+        }
+        .header-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin: 0;
+        }
+        .main-container {
+            display: flex;
+            padding: 2rem;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: calc(100vh - 90px);
+        }
+        .login-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+            height: fit-content;
+        }
+        .info-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            flex: 1;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .flash-messages {
+            color: red;
+            margin-bottom: 1rem;
+        }
+        .app-download {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .store-button {
+            height: 40px;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="{{ url_for('static', filename='images/AlBank-Logo.png') }}" alt="Bank Logo" class="logo">
+        <h1 class="header-title">AL BANK</h1>
+    </header>
+    
+    <div class="main-container">
+        <div class="login-container">
+            <h2>Hesabınızı Doğrulamak için Oturum Açın</h2>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="flash-messages">
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+            <form method="POST" action="{{ url_for('login') }}">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Parola:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Oturu aç</button>
+            </form>
+        </div>
+
+        <div class="info-container">
+            <img src="{{ url_for('static', filename='images/AlBank-Text.png') }}" alt="AlBank" class="bank-text-logo">
+            
+            <h2>AlBank Mobil Bankacılık</h2>
+            <p>AlBank Mobil Bankacılık, hızlı ve güvenli bir mobil bankacılık deneyimi sunar. AlBank Mobil Bankacılık, aşağıdaki özellikleri içerir:</p>
+            <ul>
+                <li>24/7 hesap erişimi</li>
+                <li>Hızlı ve güvenli işlemler</li>
+                <li>Fatura ödemeleri ve transferler</li>
+                <li>Mobil kontrol ödemesi</li>
+                <li>Gerçek zamanlı hesap bildirimleri</li>
+                <li>İşaret ve yüz tanıma oturum açma</li>
+            </ul>
+            
+            <h3>AlBank Mobil Bankacılık'ı indirin</h3>
+            <p>AlBank Mobil Bankacılık'ı tercih ettiğiniz uygulama mağazasından indirin:</p>
+            <div class="app-download">
+                <a href="#"><img src="{{ url_for('static', filename='images/as_download.png') }}" alt="Download on App Store" class="store-button"></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/gs_download.png') }}" alt="Get it on Google Play" class="store-button"></a>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
