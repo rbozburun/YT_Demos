@@ -1,0 +1,11 @@
+GET /identity/api/v2/user/dashboard HTTP/1.1
+Host: crapi.local:8888
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QuY29tIiwiaWF0IjoxNzM3ODA5MjYyLCJleHAiOjE3Mzg0MTQwNjIsInJvbGUiOiJ1c2VyIn0.IfKzdKyBZvEgx8s1c88CvPAqYeVA3anJtIh6qd3-pvu97yVaRQX5-MDthynBKqYEigdS7wTFxihlb0uYJmP7OpIpthipS-VuVLwNBXJ4SNTlmgZkeT4taGlVLuRmkfjdl9ON2l49ZrMduEVQDr_qf0ArVCCPnF9i1vU9gpvorMZYknVm2itrDIypDB3cZxrEznkhA_lVpbFhHMKuk3ej8oIWSVluVr2MefPxKAD4KIskgwYhAiOkVSmSBS7vp5EROeR3ihP8qso00WnD1zZB2tb-EtY7jCbfnS1GYcETY6vLaCd0xFqp4ldiIFA7LAQSNFEKWzUW7KZMVEo9HP2t-g
+Accept: */*
+Referer: http://crapi.local:8888/dashboard
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Connection: keep-alive
+

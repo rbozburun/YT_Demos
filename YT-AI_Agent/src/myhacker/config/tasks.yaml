@@ -1,0 +1,23 @@
+create_jwt_none_attack_vector_task:
+  description: >
+    Read the normal HTTP request from the normal_http_request.txt file. 
+    Then, focus on the JWT used in the request.The JWT token is present in Authorization header as
+    Authorization Bearer <JWT_TOKEN>  format. Read the JWT token and manipulate it via provided tools.
+    Finally, modify the HTTP request with the new JWT token.
+
+  expected_output: >
+    VERY IMPORTANT:
+    The task is considered completed when the new HTTP request is created with the modified JWT token.
+  agent: myhacker
+
+execute_jwt_none_attack_vector_task:
+  description: >
+    Read the provided HTTP request and send the  request to the web application and analyze the response. After your analysis, print the whole
+    HTTP request and response that you finally executed. And explain the result of the attack,  if response status code is 200, you can say the
+    target application is vulnerable to JWT None Algorithm attack. Otherwise, the target application is not vulnerable.
+  expected_output: >
+    VERY IMPORTANT:
+    If the response status is 200, then the you can assume that the web application is vulnerable to JWT None Algorithm attack.
+    Otherwise, the web application is not vulnerable to JWT None Algorithm attack. 
+  agent: myhacker
+
